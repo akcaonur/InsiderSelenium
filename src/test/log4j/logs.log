@@ -1,0 +1,23 @@
+2023-06-02 01:52:20 INFO  PropertiesFile:22 - browserType=Chrome
+  2023-06-02 01:52:20 INFO  PropertiesFile:23 - url=https://useinsider.com/
+  2023-06-02 01:52:23 INFO  BaseTest:43 - chrome driverda url=https://useinsider.com/ açıldı
+  2023-06-02 01:52:23 INFO  BasePage:40 - expectedUrl=https://useinsider.com/
+  2023-06-02 01:52:23 INFO  BasePage:41 - currentUrl=https://useinsider.com/
+  2023-06-02 01:52:24 INFO  BasePage:55 - id' si main-head olan obje bulundu.
+  2023-06-02 01:52:24 INFO  BasePage:58 - id' si main-head olan obje görünürdür.
+  2023-06-02 01:52:24 INFO  BasePage:111 - wt-cli-accept-all-btn xpathi olan elemente tıklandı
+  2023-06-02 01:52:24 INFO  BasePage:100 - //*[text()='More'] xpathi olan elemente tıklandı
+  2023-06-02 01:52:24 INFO  BasePage:76 - xPath' i //*[text()='Careers'] olan obje bulundu.
+  2023-06-02 01:52:24 INFO  BasePage:123 - Görünür değil ScreenShotı başarılı bir şekilde kaydedildi
+  2023-06-02 01:52:24 INFO  BasePage:82 - xPath' i //*[text()='Careers'] olan obje görünür değil.
+  2023-06-02 01:52:24 ERROR BasePage:83 - org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+  2023-06-02 01:52:25 INFO  BasePage:100 - //*[text()='Careers'] xpathi olan elemente tıklandı
+  2023-06-02 01:52:25 INFO  BasePage:40 - expectedUrl=https://useinsider.com/careers/
+  2023-06-02 01:52:25 INFO  BasePage:41 - currentUrl=https://useinsider.com/careers/
+  2023-06-02 01:52:25 INFO  BasePage:55 - id' si career-find-our-calling olan obje bulundu.
+  2023-06-02 01:52:25 INFO  BasePage:58 - id' si career-find-our-calling olan obje görünürdür.
+  2023-06-02 01:52:25 INFO  BasePage:55 - id' si career-our-location olan obje bulundu.
+  2023-06-02 01:52:25 INFO  BasePage:58 - id' si career-our-location olan obje görünürdür.
+  2023-06-02 01:52:25 INFO  BasePage:76 - xPath' i //*[@data-id='a8e7b90'] olan obje bulundu.
+  2023-06-02 01:52:25 INFO  BasePage:79 - xPath' i //*[@data-id='a8e7b90'] olan obje görünürdür.
+  
