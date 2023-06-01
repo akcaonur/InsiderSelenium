@@ -2,8 +2,6 @@ package org.onurakca.pages;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.junit.jupiter.api.Assertions;
-import org.onurakca.tests.BaseTest;
 import org.openqa.selenium.WebDriver;
 
 public class MainPage extends BasePage{

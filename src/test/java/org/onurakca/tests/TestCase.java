@@ -1,15 +1,13 @@
 package org.onurakca.tests;
 
-import org.junit.jupiter.api.Assertions;
+
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
+
 
 public class TestCase extends BaseTest{
 
     @Test
     public void testSuit1() throws InterruptedException {
-
-
         mainPage.checkPageUrl(url);
         mainPage.isDisplayedById(mainPage.mainPageId);
         mainPage.clickById(mainPage.acceptCookies);
