@@ -6,16 +6,12 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 
 import org.onurakca.config.PropertiesFile;
-import org.onurakca.pages.CareersPage;
-import org.onurakca.pages.MainPage;
-import org.openqa.selenium.TakesScreenshot;
+import org.onurakca.pages.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 
 
-import java.io.File;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -31,6 +27,9 @@ public class BaseTest {
 
     MainPage mainPage;
     CareersPage careersPage;
+    QualityAssurancePage qualityAssurancePage;
+    OpenPositionsPage openPositionsPage;
+    ApplyForJobPage applyForJobPage;
 
     @BeforeEach
     void setup() {
@@ -52,10 +51,13 @@ public class BaseTest {
         }
         mainPage = new MainPage(driver);
         careersPage = new CareersPage(driver);
+        qualityAssurancePage = new QualityAssurancePage(driver);
+        openPositionsPage = new OpenPositionsPage(driver);
+        applyForJobPage = new ApplyForJobPage(driver);
     }
 
     @AfterEach
     void tearDown() {
-        driver.close();
+        driver.quit();
     }
 }

@@ -5,13 +5,17 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.NoSuchElementException;
+import java.util.concurrent.TimeUnit;
 
 
 public class BasePage {
@@ -28,11 +32,9 @@ public class BasePage {
     public String getPageUrl() {
 
         return driver.getCurrentUrl();
-
     }
 
     public void checkPageUrl(String expectedUrl) {
-
         try {
             Assertions.assertEquals(expectedUrl, getPageUrl());
             log.info("expectedUrl=" + expectedUrl);
@@ -42,108 +44,85 @@ public class BasePage {
             log.error(e.toString());
             Assertions.fail();
         }
-
-
     }
 
-    public void isDisplayedById(String id) {
-
+    public void isDisplayed(WebElement webElement) {
         try {
-            WebElement webElement = driver.findElement(By.id(id));
-            log.info("id' si " + id + " olan obje bulundu.");
-            try {
-                Assertions.assertTrue(webElement.isDisplayed());
-                log.info("id' si " + id + " olan obje görünürdür.");
-            } catch (AssertionError e) {
-                screenShot("Görünür değil ");
-                log.info("id' si " + id + " olan obje görünür değil.");
-                log.error(e.toString());
-            }
+            Assertions.assertTrue(webElement.isDisplayed());
+            log.info("obje görünür");
+        } catch (AssertionError e) {
+            screenShot("Görünür değil ");
+            log.info("obje görünür değil.");
+            log.error(e.getMessage());
+            Assertions.fail();
+        }
+    }
 
+    public void clickToElement(WebElement webElement) {
+        try {
+            webElement.click();
+            log.info(webElement + " xpathi olan elemente tıklandı");
         } catch (NoSuchElementException e) {
-            screenShot("Bulunamayan obje");
-            log.info("id' si " + id + " olan obje bulunamadı.");
+            screenShot("clickToWebElement");
             log.error(e.toString());
-
-        }
-
-    }public void isDisplayedByXpath(String xPath) {
-
-        try {
-            WebElement webElement = driver.findElement(By.xpath(xPath));
-            log.info("xPath' i " + xPath + " olan obje bulundu.");
-            try {
-                Assertions.assertTrue(webElement.isDisplayed());
-                log.info("xPath' i " + xPath + " olan obje görünürdür.");
-            } catch (AssertionError e) {
-                screenShot("Görünür değil");
-                log.info("xPath' i " + xPath + " olan obje görünür değil.");
-                log.error(e.toString());
-            }
-
-        } catch (NoSuchElementException e) {
-            screenShot("Bulunamayan obje");
-            log.info("xPath' i " + xPath + " olan obje bulunamadı.");
-            log.error(e.toString());
-
-        }
-
-    }
-
-
-    public void clickByXpath(String xpath) {
-
-        try {
-            driver.findElement(By.xpath(xpath)).click();
-            log.info(xpath+" xpathi olan elemente tıklandı");
-        }catch (NoSuchElementException e){
-            screenShot("clickByXpath");
-            log.error(e.toString());
-
-        }
-
-    }
-    public void clickById(String id){
-        try {
-            driver.findElement(By.id(id)).click();
-            log.info(id+" xpathi olan elemente tıklandı");
-        }catch (NoSuchElementException e){
-            screenShot("clickById");
-            log.error(e.toString());
-
+            Assertions.fail();
         }
     }
-    public void screenShot(String ssName){
+
+    public void screenShot(String ssName) {
         TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
         File image = takesScreenshot.getScreenshotAs(OutputType.FILE);
         try {
-            Files.move(image,new File("src/test/resources/ScreenShots/"+ssName+".png"));
-            log.info(ssName+" ScreenShotı başarılı bir şekilde kaydedildi");
+            Files.move(image, new File("src/test/resources/ScreenShots/" + ssName + ".png"));
+            log.info(ssName + " ScreenShotı başarılı bir şekilde kaydedildi");
         } catch (IOException e) {
             log.error(e.toString());
+            Assertions.fail();
         }
-
-
     }
 
-    public void scrollDowntoWebElement(String xpath) {
-        WebElement webElement = xPathToWebElement(xpath);
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView();", webElement);
-    }
 
-    public WebElement xPathToWebElement(String xpath){
-        return driver.findElement(By.xpath(xpath));
-    }
-    public void forceClick(String s) {
-
+    public void forceClick(WebElement webElement) {
         JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-        jsExecutor.executeScript("arguments[0].click();", xPathToWebElement(s));
-    }
-    public void waitElementLoad(String xpath){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+        jsExecutor.executeScript("arguments[0].click();", webElement);
     }
 
+    public void waitElementLoad(WebElement webElement) {
+        wait.until(ExpectedConditions.visibilityOf(webElement));
+    }
 
 
+    public void selectDropDownMenuById(WebElement webElement, String selectText) {
+        Select dropDown = new Select(webElement);
+        dropDown.selectByVisibleText(selectText);
+    }
+
+
+    public void switchToNewTab() {
+        String currentWindowHandle = driver.getWindowHandle();
+        for (String windowHandle : driver.getWindowHandles()) {
+            if (!windowHandle.equals(currentWindowHandle)) {
+                driver.switchTo().window(windowHandle);
+                break;
+            }
+        }
+    }
+
+    public void moveToElement(WebElement element) {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).perform();
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public void findScrollElementCenter(WebElement webElement) {
+        try {
+            String scrollElementIntoMiddle = "var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);"
+                    + "var elementTop = arguments[0].getBoundingClientRect().top;"
+                    + "window.scrollBy(0, elementTop-(viewPortHeight/2));";
+            ((JavascriptExecutor) driver).executeScript(scrollElementIntoMiddle, webElement);
+            TimeUnit.SECONDS.sleep(1);
+        } catch (Exception e) {
+            Assertions.fail(webElement + " scroll edilirken problem oluştu.");
+        }
+    }
 }

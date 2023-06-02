@@ -4,28 +4,37 @@ package org.onurakca.tests;
 import org.junit.jupiter.api.Test;
 
 
-public class TestCase extends BaseTest{
+public class TestCase extends BaseTest {
 
     @Test
-    public void testSuit1() throws InterruptedException {
+    public void
+    testSuit1() {
         mainPage.checkPageUrl(url);
-        mainPage.isDisplayedById(mainPage.mainPageId);
-        mainPage.clickById(mainPage.acceptCookies);
-        mainPage.clickByXpath(mainPage.moreNaviBar);
-        mainPage.isDisplayedByXpath(mainPage.careers);
-        mainPage.clickByXpath(mainPage.careers);
+        mainPage.isDisplayed(mainPage.mainPageId);
+        mainPage.clickToElement(mainPage.acceptCookies);
+        mainPage.clickToElement(mainPage.moreNaviBar);
+        mainPage.waitElementLoad(mainPage.careers);
+        mainPage.isDisplayed(mainPage.careers);
+        mainPage.clickToElement(mainPage.careers);
         careersPage.checkPageUrl(careersPage.careersPageUrl);
-        careersPage.isDisplayedById(careersPage.seeAllTeams);
-        careersPage.isDisplayedById(careersPage.ourLocation);
-        careersPage.isDisplayedByXpath(careersPage.lifeAtInsider);
-        careersPage.scrollDowntoWebElement(careersPage.seeAllTeamsButton);
-        //careersPage.isDisplayedById(careersPage.seeAllTeamsButton);
-
+        careersPage.isDisplayed(careersPage.seeAllTeams);
+        careersPage.isDisplayed(careersPage.ourLocation);
+        careersPage.isDisplayed(careersPage.lifeAtInsider);
+        careersPage.findScrollElementCenter(careersPage.seeAllTeamsButton);
         careersPage.forceClick(careersPage.seeAllTeamsButton);
         careersPage.waitElementLoad(careersPage.waitLoadAllTeams);
-        careersPage.scrollDowntoWebElement(careersPage.selectQualityAssurance);
-
+        careersPage.findScrollElementCenter(careersPage.selectQualityAssurance);
         careersPage.forceClick(careersPage.selectQualityAssurance);
+        qualityAssurancePage.isDisplayed(qualityAssurancePage.seeAllQaJobs);
+        qualityAssurancePage.clickToElement(qualityAssurancePage.seeAllQaJobs);
+        openPositionsPage.waitElementLoad(openPositionsPage.filterByDepartment);
+        openPositionsPage.selectDropDownMenuById(openPositionsPage.filterByLocationDropdown, openPositionsPage.location);
+        openPositionsPage.checkFilterByDepartmantSelectedQa();
+        openPositionsPage.checkJobDetails();
+        openPositionsPage.forceClick(openPositionsPage.applyNowButton);
+        openPositionsPage.switchToNewTab();
+        applyForJobPage.waitElementLoad(applyForJobPage.applyForThisJobBtn);
+        applyForJobPage.checkPageUrl(applyForJobPage.applyJobDetails);
 
 
     }

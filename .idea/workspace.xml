@@ -4,24 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="029b2570-fe1d-488c-a579-627bc8b54bab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/onurakca/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/onurakca/config/PropertiesFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/onurakca/pages/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/onurakca/pages/CareersPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/onurakca/pages/MainPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/onurakca/tests/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/onurakca/tests/TestCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/log4j/logs.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/ScreenShots/Görünür değil.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/ScreenShots/SayfaUrl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/log4j.properties" afterDir="false" />
+    <list default="true" id="029b2570-fe1d-488c-a579-627bc8b54bab" name="Changes" comment="first1">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/onurakca/pages/ApplyForJobPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/onurakca/pages/OpenPositionsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/onurakca/pages/QualityAssurancePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/onurakca/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/onurakca/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/onurakca/pages/CareersPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/onurakca/pages/CareersPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/onurakca/pages/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/onurakca/pages/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/onurakca/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/onurakca/tests/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/onurakca/tests/TestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/onurakca/tests/TestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/log4j/logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/log4j/logs.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/ScreenShots/Görünür değil.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/ScreenShots/Görünür değil.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +32,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="788d82fc-7b6d-493b-8280-4ce4d609b019" />
+        <option name="url" value="https://github.com/akcaonur/InsiderSelenium.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProjectId" id="2QbatUMk5HomwmJAVfKbpvBxrOA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -46,16 +53,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\project\InsiderSelenium\InsiderSelenium\src\test\resources" />
@@ -125,9 +132,27 @@
       <option name="presentableId" value="Default" />
       <updated>1685624949538</updated>
     </task>
+    <task id="LOCAL-00001" summary="first">
+      <created>1685659989980</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685659989980</updated>
+    </task>
+    <task id="LOCAL-00002" summary="first1">
+      <created>1685660383689</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685660383689</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="first" />
+    <MESSAGE value="first1" />
+    <option name="LAST_COMMIT_MESSAGE" value="first1" />
   </component>
 </project>
