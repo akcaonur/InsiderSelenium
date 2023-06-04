@@ -25,10 +25,10 @@ public class TestCase extends BaseTest {
         careersPage.waitElementLoad(careersPage.waitLoadAllTeams);
         careersPage.findScrollElementCenter(careersPage.selectQualityAssurance);
         careersPage.forceClick(careersPage.selectQualityAssurance);
-        qualityAssurancePage.isDisplayed(qualityAssurancePage.seeAllQaJobs);
+        qualityAssurancePage.waitElementLoad(qualityAssurancePage.seeAllQaJobs);
         qualityAssurancePage.clickToElement(qualityAssurancePage.seeAllQaJobs);
         openPositionsPage.waitElementLoad(openPositionsPage.filterByDepartment);
-        openPositionsPage.selectDropDownMenuById(openPositionsPage.filterByLocationDropdown, openPositionsPage.location);
+        openPositionsPage.selectLocationDropDownMenu(openPositionsPage.dropDownMenu, openPositionsPage.selecLocation);
         openPositionsPage.checkFilterByDepartmantSelectedQa();
         openPositionsPage.checkJobDetails();
         openPositionsPage.forceClick(openPositionsPage.applyNowButton);

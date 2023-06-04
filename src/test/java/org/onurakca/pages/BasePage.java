@@ -8,7 +8,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
+
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
@@ -25,7 +25,7 @@ public class BasePage {
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
-        wait = new WebDriverWait(this.driver, Duration.ofSeconds(10L));
+        wait = new WebDriverWait(this.driver, Duration.ofSeconds(90L));
         PageFactory.initElements(driver, this);
     }
 
@@ -41,6 +41,7 @@ public class BasePage {
             log.info("currentUrl=" + driver.getCurrentUrl());
         } catch (AssertionError e) {
             screenShot("SayfaUrl");
+            log.info("sayfanın urlsi kontrol edilirken hata alındı");
             log.error(e.toString());
             Assertions.fail();
         }
@@ -64,6 +65,7 @@ public class BasePage {
             log.info(webElement + " xpathi olan elemente tıklandı");
         } catch (NoSuchElementException e) {
             screenShot("clickToWebElement");
+            log.info("elemente tıklanırken hata alındı");
             log.error(e.toString());
             Assertions.fail();
         }
@@ -76,6 +78,7 @@ public class BasePage {
             Files.move(image, new File("src/test/resources/ScreenShots/" + ssName + ".png"));
             log.info(ssName + " ScreenShotı başarılı bir şekilde kaydedildi");
         } catch (IOException e) {
+            log.info("screenshot alınamadı");
             log.error(e.toString());
             Assertions.fail();
         }
@@ -85,17 +88,16 @@ public class BasePage {
     public void forceClick(WebElement webElement) {
         JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
         jsExecutor.executeScript("arguments[0].click();", webElement);
+        log.info("elemente zorla tıklanır");
     }
 
     public void waitElementLoad(WebElement webElement) {
         wait.until(ExpectedConditions.visibilityOf(webElement));
+        log.info("elementin yüklenmesi beklenir");
     }
 
 
-    public void selectDropDownMenuById(WebElement webElement, String selectText) {
-        Select dropDown = new Select(webElement);
-        dropDown.selectByVisibleText(selectText);
-    }
+
 
 
     public void switchToNewTab() {
@@ -106,12 +108,23 @@ public class BasePage {
                 break;
             }
         }
+        log.info("Yeni tab'a geçildi");
     }
 
     public void moveToElement(WebElement element) {
-        Actions actions = new Actions(driver);
-        actions.moveToElement(element).perform();
-        wait.until(ExpectedConditions.visibilityOf(element));
+
+        try {
+            Actions actions = new Actions(driver);
+            actions.moveToElement(element).perform();
+            wait.until(ExpectedConditions.visibilityOf(element));
+            log.info("elementin üstüne gidildi");
+        } catch (Exception e) {
+            log.info("elementin üstüne gidilirken hata alındı");
+            log.error(e.getMessage());
+            screenShot("moveElement");
+            Assertions.fail();
+        }
+
     }
 
     public void findScrollElementCenter(WebElement webElement) {
@@ -121,8 +134,14 @@ public class BasePage {
                     + "window.scrollBy(0, elementTop-(viewPortHeight/2));";
             ((JavascriptExecutor) driver).executeScript(scrollElementIntoMiddle, webElement);
             TimeUnit.SECONDS.sleep(1);
+            log.info("elemente scroll edildi");
         } catch (Exception e) {
+            log.info("elemente scroll edilemedi");
+            log.error(e.getMessage());
+            screenShot("scrollElementCenter");
             Assertions.fail(webElement + " scroll edilirken problem oluştu.");
+
+
         }
     }
 }

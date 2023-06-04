@@ -19,12 +19,16 @@ public class OpenPositionsPage extends BasePage {
     public WebElement filterByLocationDropdown;
     public String location = "Istanbul, Turkey";
     public String depertmant = "Quality Assurance";
+    @FindBy(xpath = "(//*[@role='presentation'])[1]")
+    public WebElement dropDownMenu;
+    @FindBy(xpath = "//*[@class='select2-results']//li[2]")
+    public WebElement selecLocation;
     @FindBy(xpath = "//*[@selected='selected']")
     public WebElement filterByDepartment;
     @FindBy(id = "jobs-list")
-    public  WebElement jobList;
+    public WebElement jobList;
     @FindBy(xpath = "//*[@href='https://jobs.lever.co/useinsider/78ddbec0-16bf-4eab-b5a6-04facb993ddc']")
-    public  WebElement applyNowButton;
+    public WebElement applyNowButton;
 
     @FindBy(xpath = "//*[@href='https://useinsider.com/request-a-demo/']")
     public WebElement getADemoBtn;
@@ -44,22 +48,23 @@ public class OpenPositionsPage extends BasePage {
     }
 
 
-    public void checkJobDetails()  {
+    public void checkJobDetails() {
         List<WebElement> childreen = jobList.findElements(By.xpath("./*"));
 
         try {
             for (WebElement child : childreen) {
-                log.info("4");
                 findScrollElementCenter(child);
                 waitUntilElementClickable(child);
                 moveToElement(child);
-                log.info(child.getText());
                 Assertions.assertTrue(child.getText().contains("Quality Assurance"));
                 Assertions.assertTrue(child.getText().contains("Istanbul, Turkey"));
                 Assertions.assertTrue(child.getText().contains("Apply Now"));
+                log.info("job detayları kontrol edildi");
             }
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            log.error("job detayları hatalı");
+            log.error(e.getMessage());
+            screenShot("jobdetails");
         }
     }
 
@@ -70,6 +75,25 @@ public class OpenPositionsPage extends BasePage {
         } catch (Throwable var3) {
             log.error(var3.getMessage());
             Assertions.fail("Element: " + elementFindBy + " WebElement click edilebilir durumda degil !!");
+            screenShot("elementNotClick");
+        }
+
+    }
+
+    public void selectLocationDropDownMenu(WebElement webElement1, WebElement webElement2) {
+
+        //.//option[normalize-space(.) = "Istanbul, Turkey"
+        try {
+            //Select s = new Select(webElement);
+            //s.selectByValue("Istanbul, Turkey");
+
+            webElement1.click();
+            waitElementLoad(webElement2);
+            webElement2.click();
+
+        } catch (Exception e) {
+            log.info(e.getMessage());
+            Assertions.fail();
         }
 
     }

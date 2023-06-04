@@ -1,0 +1,79 @@
+2023-06-04 10:42:31 INFO  PropertiesFile:22 - browserType=Chrome
+  2023-06-04 10:42:31 INFO  PropertiesFile:23 - url=https://useinsider.com/
+  2023-06-04 10:42:36 INFO  BaseTest:42 - chrome driverda url=https://useinsider.com/ açıldı
+  2023-06-04 10:42:36 INFO  BasePage:40 - expectedUrl=https://useinsider.com/
+  2023-06-04 10:42:36 INFO  BasePage:41 - currentUrl=https://useinsider.com/
+  2023-06-04 10:42:36 INFO  BasePage:53 - obje görünür
+  2023-06-04 10:42:36 INFO  BasePage:65 - [[ChromeDriver: chrome on windows (15ddd44202bb08e3c986851b0fda42f0)] -> id: wt-cli-accept-all-btn] xpathi olan elemente tıklandı
+  2023-06-04 10:42:36 INFO  BasePage:65 - [[ChromeDriver: chrome on windows (15ddd44202bb08e3c986851b0fda42f0)] -> xpath: //*[text()='More']] xpathi olan elemente tıklandı
+  2023-06-04 10:42:36 INFO  BasePage:96 - elementin yüklenmesi beklenir
+  2023-06-04 10:42:36 INFO  BasePage:53 - obje görünür
+  2023-06-04 10:42:38 INFO  BasePage:65 - [[ChromeDriver: chrome on windows (15ddd44202bb08e3c986851b0fda42f0)] -> xpath: //*[text()='Careers']] xpathi olan elemente tıklandı
+  2023-06-04 10:42:38 INFO  BasePage:40 - expectedUrl=https://useinsider.com/careers/
+  2023-06-04 10:42:38 INFO  BasePage:41 - currentUrl=https://useinsider.com/careers/
+  2023-06-04 10:42:38 INFO  BasePage:53 - obje görünür
+  2023-06-04 10:42:38 INFO  BasePage:53 - obje görünür
+  2023-06-04 10:42:38 INFO  BasePage:53 - obje görünür
+  2023-06-04 10:42:39 INFO  BasePage:137 - elemente scroll edildi
+  2023-06-04 10:42:39 INFO  BasePage:91 - elemente zorla tıklanır
+  2023-06-04 10:42:40 INFO  BasePage:96 - elementin yüklenmesi beklenir
+  2023-06-04 10:42:41 INFO  BasePage:137 - elemente scroll edildi
+  2023-06-04 10:42:42 INFO  BasePage:91 - elemente zorla tıklanır
+  2023-06-04 10:42:42 INFO  BasePage:96 - elementin yüklenmesi beklenir
+  2023-06-04 10:42:43 INFO  BasePage:65 - Proxy element for: DefaultElementLocator 'By.xpath: //*[text()='See all QA jobs']' xpathi olan elemente tıklandı
+  2023-06-04 10:42:43 INFO  BasePage:96 - elementin yüklenmesi beklenir
+  2023-06-04 10:42:43 INFO  BasePage:96 - elementin yüklenmesi beklenir
+  2023-06-04 10:42:43 INFO  BasePage:96 - elementin yüklenmesi beklenir
+  2023-06-04 10:42:45 INFO  BasePage:96 - elementin yüklenmesi beklenir
+  2023-06-04 10:42:45 INFO  OpenPositionsPage:47 - departman filitresinde Quality Assurance seçili
+  2023-06-04 10:42:46 INFO  BasePage:137 - elemente scroll edildi
+  2023-06-04 10:42:46 INFO  BasePage:120 - elementin üstüne gidildi
+  2023-06-04 10:42:46 INFO  OpenPositionsPage:62 - job detayları kontrol edildi
+  2023-06-04 10:42:47 INFO  BasePage:137 - elemente scroll edildi
+  2023-06-04 10:42:47 INFO  BasePage:120 - elementin üstüne gidildi
+  2023-06-04 10:42:47 INFO  OpenPositionsPage:62 - job detayları kontrol edildi
+  2023-06-04 10:42:47 INFO  BasePage:91 - elemente zorla tıklanır
+  2023-06-04 10:42:47 INFO  BasePage:111 - Yeni tab'a geçildi
+  2023-06-04 10:42:50 INFO  BasePage:96 - elementin yüklenmesi beklenir
+  2023-06-04 10:42:50 INFO  BasePage:40 - expectedUrl=https://jobs.lever.co/useinsider/78ddbec0-16bf-4eab-b5a6-04facb993ddc
+  2023-06-04 10:42:50 INFO  BasePage:41 - currentUrl=https://jobs.lever.co/useinsider/78ddbec0-16bf-4eab-b5a6-04facb993ddc
+  2023-06-04 10:43:00 INFO  PropertiesFile:22 - browserType=Firefox
+  2023-06-04 10:43:00 INFO  PropertiesFile:23 - url=https://useinsider.com/
+  2023-06-04 10:43:04 INFO  BaseTest:48 - Firefox driverda url=https://useinsider.com/ açıldı
+  2023-06-04 10:43:04 INFO  BasePage:40 - expectedUrl=https://useinsider.com/
+  2023-06-04 10:43:04 INFO  BasePage:41 - currentUrl=https://useinsider.com/
+  2023-06-04 10:43:04 INFO  BasePage:53 - obje görünür
+  2023-06-04 10:43:05 INFO  BasePage:65 - [[FirefoxDriver: firefox on windows (f043b109-5572-4997-963d-c9df4a400371)] -> id: wt-cli-accept-all-btn] xpathi olan elemente tıklandı
+  2023-06-04 10:43:05 INFO  BasePage:65 - [[FirefoxDriver: firefox on windows (f043b109-5572-4997-963d-c9df4a400371)] -> xpath: //*[text()='More']] xpathi olan elemente tıklandı
+  2023-06-04 10:43:06 INFO  BasePage:96 - elementin yüklenmesi beklenir
+  2023-06-04 10:43:06 INFO  BasePage:53 - obje görünür
+  2023-06-04 10:43:08 INFO  BasePage:65 - [[FirefoxDriver: firefox on windows (f043b109-5572-4997-963d-c9df4a400371)] -> xpath: //*[text()='Careers']] xpathi olan elemente tıklandı
+  2023-06-04 10:43:08 INFO  BasePage:40 - expectedUrl=https://useinsider.com/careers/
+  2023-06-04 10:43:08 INFO  BasePage:41 - currentUrl=https://useinsider.com/careers/
+  2023-06-04 10:43:08 INFO  BasePage:53 - obje görünür
+  2023-06-04 10:43:08 INFO  BasePage:53 - obje görünür
+  2023-06-04 10:43:08 INFO  BasePage:53 - obje görünür
+  2023-06-04 10:43:09 INFO  BasePage:137 - elemente scroll edildi
+  2023-06-04 10:43:09 INFO  BasePage:91 - elemente zorla tıklanır
+  2023-06-04 10:43:10 INFO  BasePage:96 - elementin yüklenmesi beklenir
+  2023-06-04 10:43:11 INFO  BasePage:137 - elemente scroll edildi
+  2023-06-04 10:43:11 INFO  BasePage:91 - elemente zorla tıklanır
+  2023-06-04 10:43:12 INFO  BasePage:96 - elementin yüklenmesi beklenir
+  2023-06-04 10:43:13 INFO  BasePage:65 - Proxy element for: DefaultElementLocator 'By.xpath: //*[text()='See all QA jobs']' xpathi olan elemente tıklandı
+  2023-06-04 10:43:15 INFO  BasePage:96 - elementin yüklenmesi beklenir
+  2023-06-04 10:43:15 INFO  BasePage:96 - elementin yüklenmesi beklenir
+  2023-06-04 10:43:16 INFO  BasePage:96 - elementin yüklenmesi beklenir
+  2023-06-04 10:43:16 INFO  BasePage:96 - elementin yüklenmesi beklenir
+  2023-06-04 10:43:16 INFO  OpenPositionsPage:47 - departman filitresinde Quality Assurance seçili
+  2023-06-04 10:43:17 INFO  BasePage:137 - elemente scroll edildi
+  2023-06-04 10:43:17 INFO  BasePage:120 - elementin üstüne gidildi
+  2023-06-04 10:43:17 INFO  OpenPositionsPage:62 - job detayları kontrol edildi
+  2023-06-04 10:43:18 INFO  BasePage:137 - elemente scroll edildi
+  2023-06-04 10:43:18 INFO  BasePage:120 - elementin üstüne gidildi
+  2023-06-04 10:43:18 INFO  OpenPositionsPage:62 - job detayları kontrol edildi
+  2023-06-04 10:43:19 INFO  BasePage:91 - elemente zorla tıklanır
+  2023-06-04 10:43:19 INFO  BasePage:111 - Yeni tab'a geçildi
+  2023-06-04 10:43:21 INFO  BasePage:96 - elementin yüklenmesi beklenir
+  2023-06-04 10:43:21 INFO  BasePage:40 - expectedUrl=https://jobs.lever.co/useinsider/78ddbec0-16bf-4eab-b5a6-04facb993ddc
+  2023-06-04 10:43:21 INFO  BasePage:41 - currentUrl=https://jobs.lever.co/useinsider/78ddbec0-16bf-4eab-b5a6-04facb993ddc
+  
