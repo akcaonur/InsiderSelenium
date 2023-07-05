@@ -76,4 +76,34 @@
   2023-06-04 10:43:21 INFO  BasePage:96 - elementin yüklenmesi beklenir
   2023-06-04 10:43:21 INFO  BasePage:40 - expectedUrl=https://jobs.lever.co/useinsider/78ddbec0-16bf-4eab-b5a6-04facb993ddc
   2023-06-04 10:43:21 INFO  BasePage:41 - currentUrl=https://jobs.lever.co/useinsider/78ddbec0-16bf-4eab-b5a6-04facb993ddc
+  2023-07-06 01:24:14 INFO  PropertiesFile:22 - browserType=Chrome
+  2023-07-06 01:24:14 INFO  PropertiesFile:23 - url=https://useinsider.com/
+  2023-07-06 01:24:21 INFO  BaseTest:42 - chrome driverda url=https://useinsider.com/ açıldı
+  2023-07-06 01:24:21 INFO  BasePage:40 - expectedUrl=https://useinsider.com/
+  2023-07-06 01:24:21 INFO  BasePage:41 - currentUrl=https://useinsider.com/
+  2023-07-06 01:24:21 INFO  BasePage:53 - obje görünür
+  2023-07-06 01:24:21 INFO  BasePage:65 - [[ChromeDriver: chrome on windows (53b4e0eccc1dc03ddc333c0e70b1085d)] -> id: wt-cli-accept-all-btn] xpathi olan elemente tıklandı
+  2023-07-06 01:24:21 INFO  BasePage:65 - [[ChromeDriver: chrome on windows (53b4e0eccc1dc03ddc333c0e70b1085d)] -> xpath: //*[text()='More']] xpathi olan elemente tıklandı
+  2023-07-06 01:24:21 INFO  BasePage:96 - elementin yüklenmesi beklenir
+  2023-07-06 01:24:21 INFO  BasePage:53 - obje görünür
+  2023-07-06 01:24:23 INFO  BasePage:65 - [[ChromeDriver: chrome on windows (53b4e0eccc1dc03ddc333c0e70b1085d)] -> xpath: //*[text()='Careers']] xpathi olan elemente tıklandı
+  2023-07-06 01:24:23 INFO  BasePage:40 - expectedUrl=https://useinsider.com/careers/
+  2023-07-06 01:24:23 INFO  BasePage:41 - currentUrl=https://useinsider.com/careers/
+  2023-07-06 01:24:23 INFO  BasePage:53 - obje görünür
+  2023-07-06 01:24:23 INFO  BasePage:53 - obje görünür
+  2023-07-06 01:24:23 INFO  BasePage:53 - obje görünür
+  2023-07-06 01:24:24 INFO  BasePage:137 - elemente scroll edildi
+  2023-07-06 01:24:24 INFO  BasePage:91 - elemente zorla tıklanır
+  2023-07-06 01:24:25 INFO  BasePage:96 - elementin yüklenmesi beklenir
+  2023-07-06 01:24:26 INFO  BasePage:137 - elemente scroll edildi
+  2023-07-06 01:24:27 INFO  BasePage:91 - elemente zorla tıklanır
+  2023-07-06 01:24:27 INFO  BasePage:96 - elementin yüklenmesi beklenir
+  2023-07-06 01:24:28 INFO  BasePage:65 - Proxy element for: DefaultElementLocator 'By.xpath: //*[text()='See all QA jobs']' xpathi olan elemente tıklandı
+  2023-07-06 01:24:29 INFO  BasePage:96 - elementin yüklenmesi beklenir
+  2023-07-06 01:24:29 INFO  BasePage:96 - elementin yüklenmesi beklenir
+  2023-07-06 01:24:29 INFO  BasePage:96 - elementin yüklenmesi beklenir
+  2023-07-06 01:24:31 INFO  BasePage:96 - elementin yüklenmesi beklenir
+  2023-07-06 01:24:31 INFO  OpenPositionsPage:47 - departman filitresinde Quality Assurance seçili
+  2023-07-06 01:24:32 INFO  BasePage:137 - elemente scroll edildi
+  2023-07-06 01:24:32 INFO  BasePage:120 - elementin üstüne gidildi
   
